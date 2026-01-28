@@ -8,8 +8,9 @@ export default function ProductCard(props){
             <p>{props.price}</p>
             <img
                 className="productImage"
-                src="https://imagedelivery.net/7D3NQGy_afPWwbfcO5Acjw/celltronics.lk/2024/05/iPad-Air-M2-Chip-1.jpg/w=800,h=800,fit=crop"/>
+                src={props.image}
+            />
             <button>Add to cart</button>
         </div>
     )
-}
+} 
