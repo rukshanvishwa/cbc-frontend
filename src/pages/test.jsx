@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 export default function TestPage() {
-	const [count, setCount] = useState(150);    
-    const [status, setStatus] = useState("online");
-    
+	const [count, setCount] = useState(150);
+	const [status, setStatus] = useState("online");
+
 
 
 	return (
@@ -13,7 +13,7 @@ export default function TestPage() {
 					<button
 						onClick={() => {
 							console.log("Decreasing....");
-							setCount(count -1);
+							setCount(count - 1);
 						}}
 						className="w-[100px] bg-accent h-[40px] rounded-lg"
 					>
@@ -32,22 +32,22 @@ export default function TestPage() {
 						+
 					</button>
 				</div>
-                <div className="flex flex-col justify-center items-center gap-[20px]">
-                        <span className="text-accent text-5xl">{status}</span>
-                        <div className="flex flex-row gap-[20px]">
-                            <button onClick={() => setStatus("online")} className="w-[100px] bg-accent h-[40px] rounded-lg">
-                                online
-                            </button>
-                            <button onClick={() => setStatus("offline")} className="w-[100px] bg-accent h-[40px] rounded-lg">
-                                offline
-                            </button>
-                            <button onClick={() => setStatus("deactivated")} className="w-[100px] bg-accent h-[40px] rounded-lg">
-                                deactivated
-                            </button>
+				<div className="flex flex-col justify-center items-center gap-[20px]">
+					<span className="text-accent text-5xl">{status}</span>
+					<div className="flex flex-row gap-[20px]">
+						<button onClick={() => setStatus("online")} className="w-[100px] bg-accent h-[40px] rounded-lg">
+							online
+						</button>
+						<button onClick={() => setStatus("offline")} className="w-[100px] bg-accent h-[40px] rounded-lg">
+							offline
+						</button>
+						<button onClick={() => setStatus("deactivated")} className="w-[100px] bg-accent h-[40px] rounded-lg">
+							deactivated
+						</button>
 
-                        </div>
-                </div>
+					</div>
+				</div>
 			</div>
 		</div>
-	);
+	);    
 }

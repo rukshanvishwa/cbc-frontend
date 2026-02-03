@@ -2,11 +2,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import ProductCard from "./components/productCard";
 import AdminPage from "./pages/adminPage";
-// import HomePage from "./pages/homePage";
+import HomePage from "./pages/homePage";
 import TestPage from "./pages/test";
 import LoginPage from "./pages/loginPage";
 import { Toaster } from "react-hot-toast";
-import HomePage from "./pages/homepage";
 
 function App() {
 	return (

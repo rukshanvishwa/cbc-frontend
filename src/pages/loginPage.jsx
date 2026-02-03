@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
 	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState(""); 
+	const [password, setPassword] = useState("");
     const navigate = useNavigate()
 
 	async function login() {
@@ -44,7 +44,7 @@ export default function LoginPage() {
 					<div className="flex items-center gap-4">
 						<img
 							src="/logo.png"
-							alt="CBC - Crystal Beauty Clear "
+							alt="CBC - Crystal Beauty Clear"
 							className="h-10 w-auto"
 						/>
 						<span className="text-primary/90 tracking-wide font-semibold">
