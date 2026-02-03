@@ -25,7 +25,7 @@ export default function LoginPage() {
 		} catch (e) {
 			console.error("Login failed:", e);
             //alert("Login failed. Please check your credentials.");
-            toast.error("Login failed. Please check your credentials.");
+            toast.error( );
 		}
 	}
 
