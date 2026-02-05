@@ -39,7 +39,7 @@ export default function AdminPage(){
                 <div className="h-full w-full max-w-full max-h-full overflow-y-scroll" >
                     <Routes path="/">
                         <Route path="/" element={<h1>Dashboard</h1>}/>
-                        <Route path="/products" element={<h1>Products</h1>}/>
+                        <Route path="/products" element={<AdminProductPage />}/>
                         <Route path="/orders" element={<h1>Orders</h1>}/>
                         <Route path="/users" element={<h1>Users</h1>}/>
                     </Routes>
