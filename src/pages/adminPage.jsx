@@ -1,8 +1,9 @@
-import { Link, Links, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { FaChartLine } from "react-icons/fa";
 import { MdShoppingCartCheckout } from "react-icons/md";
 import { MdOutlineMoveToInbox } from "react-icons/md";
 import { LuUsers } from "react-icons/lu";
+import AdminProductPage from "./admin/adminProductPage";
 
 
 export default function AdminPage(){

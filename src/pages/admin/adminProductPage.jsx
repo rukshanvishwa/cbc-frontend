@@ -82,7 +82,78 @@ export default function AdminProductPage(){
     console.log(products);
 
     return(
-        <div className="w-full h-full ">
+        <div className="w-full h-full p-[10px]">
+
+              <table className="border w-full text-center">
+                <thead>
+                  <tr>
+                    <th>
+                      Image
+                    </th>
+                    <th>
+                      Product ID
+                    </th>
+                    <th>
+                      Product Name
+                    </th>
+                    <th>
+                      Product Price
+                    </th>
+                    <th>
+                      Labelled Price
+                    </th>
+                    <th>
+                      Category
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src="logo.png" className="w-16 h-16 object-cover" />
+                    </td>
+                    <td>
+                      COS001
+                    </td>
+                    <td>
+                      Matte Liquid Lipstick
+                    </td>
+                    <td>
+                      1800
+                    </td>
+                    <td>
+                      2200
+                    </td>
+                    <td>
+                      Lips
+                    </td>
+                  </tr>
+
+                  
+                  <tr>
+                    <td>
+                      <img src="logo.png" className="w-16 h-16 object-cover" />
+                    </td>
+                    <td>
+                      COS002
+                    </td>
+                    <td>
+                      Vitamin C Face Serum
+                    </td>
+                    <td>
+                      3200
+                    </td>
+                    <td>
+                      3800
+                    </td>
+                    <td>
+                      Skincare
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
             {
                 products.map(
                     (item)=>{
