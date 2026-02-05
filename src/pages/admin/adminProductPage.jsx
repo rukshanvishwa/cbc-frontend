@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 
-const sampleData=[
+const sampleData = [
   {
     productID: "COS001",
     name: "Matte Liquid Lipstick",
@@ -70,100 +70,51 @@ const sampleData=[
 
 
 
-export default function AdminProductPage(){
-    const [products, setProducts] = useState(sampleData)
+export default function AdminProductPage() {
+  const [products, setProducts] = useState(sampleData)
 
-    // axios.get(import.meta.env.VITE_API_URL + "/api/products/").then(
-    //     (response) => {
-            // console.log(response.data);
-            // setProducts(response.data);
-    //     }
-    // )
-    console.log(products);
+  // axios.get(import.meta.env.VITE_API_URL + "/api/products/").then(
+  //     (response) => {
+  // console.log(response.data);
+  // setProducts(response.data);
+  //     }
+  // )
+  console.log(products);
 
-    return(
-        <div className="w-full h-full p-[10px]">
+  return (
+    <div className="w-full h-full p-[10px]">
 
-              <table className="border w-full text-center">
-                <thead>
-                  <tr>
-                    <th>
-                      Image
-                    </th>
-                    <th>
-                      Product ID
-                    </th>
-                    <th>
-                      Product Name
-                    </th>
-                    <th>
-                      Product Price
-                    </th>
-                    <th>
-                      Labelled Price
-                    </th>
-                    <th>
-                      Category
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <img src="logo.png" className="w-16 h-16 object-cover" />
-                    </td>
-                    <td>
-                      COS001
-                    </td>
-                    <td>
-                      Matte Liquid Lipstick
-                    </td>
-                    <td>
-                      1800
-                    </td>
-                    <td>
-                      2200
-                    </td>
-                    <td>
-                      Lips
-                    </td>
-                  </tr>
+      <table className="border w-full text-center">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Labelled Price</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+        products.map(
+          (item) => {
+            return ( <tr>
+            <td>
+              <img src={item.images[0]} className="w-16 h-16 object-cover" />
+            </td>
+            <td>{item.productID}</td>
+            <td>{item.name}</td>
+            <td>{item.price}</td>
+            <td>{item.labelledPrice}</td>
+            <td>{item.category}</td>
+          </tr>
 
-                  
-                  <tr>
-                    <td>
-                      <img src="logo.png" className="w-16 h-16 object-cover" />
-                    </td>
-                    <td>
-                      COS002
-                    </td>
-                    <td>
-                      Vitamin C Face Serum
-                    </td>
-                    <td>
-                      3200
-                    </td>
-                    <td>
-                      3800
-                    </td>
-                    <td>
-                      Skincare
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-
-
-            {
-                products.map(
-                    (item)=>{
-                      return (<p key={item.productID} className="w-full text-accent">
-                        {item.name} - {item.price}
-                      </p>
-                        
-                        )
-                })
-            }
-        </div>
-    )
+            )
+          })
+      }
+        </tbody>
+      </table>
+    </div>
+  )
 }
