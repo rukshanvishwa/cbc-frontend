@@ -4,6 +4,7 @@ import { MdShoppingCartCheckout } from "react-icons/md";
 import { MdOutlineMoveToInbox } from "react-icons/md";
 import { LuUsers } from "react-icons/lu";
 import AdminProductPage from "./admin/adminProductPage";
+import AddProductPage from "./admin/adminAddNewProduct";
 
 
 export default function AdminPage(){
@@ -41,8 +42,8 @@ export default function AdminPage(){
                     <Routes path="/">
                         <Route path="/" element={<h1>Dashboard</h1>}/>
                         <Route path="/products" element={<AdminProductPage />}/>
-                        <Route path="/orders" element={<h1>Orders</h1>}/>
-                        <Route path="/users" element={<h1>Users</h1>}/>
+                        <Route path="/orders" element={<h1>Orders</h1>}/>             
+                        <Route path="/add-product" element={<AddProductPage />}/>
                     </Routes>
                 </div>    
             </div>
